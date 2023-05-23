@@ -1,0 +1,88 @@
+.microfono{
+    border-radius: 100%;
+    background-color: rgba(255, 0, 0, 0.863);
+    border-color: rgba(255, 0, 0, 0.938);
+    border-width: 10px;
+    border-style: solid;
+    cursor: pointer;   
+    width: 182px;
+    height: 172px;
+}
+.microfono:hover{
+    background-color: rgb(255, 0, 0);
+}
+.contentall{
+    height: 600px;
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    align-items: center;
+}
+.contentRecorder{
+    border-radius: 5px;
+    height: 500px;
+    width: 300px;
+    
+}
+.loginimg{
+    height: 500px;
+    width: 300px;
+    background-color: rgb(24, 24, 24);
+    display: grid;
+    border-radius: 5px 0px 0px 5px;
+}
+.contentUser{
+    width: 400px;
+    height: 500px;
+    border-radius: 0px 5px 5px 0px;
+    background-color: white;
+}
+h1{
+    text-align: center;
+    margin: 40px;
+}
+/* .user{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+} */
+.registrarBoton{
+    border-radius: 5px;
+    border: 1px solid;
+    margin: 10px 70px;
+    padding: 8px 95px;
+    background-color: rgb(24, 24, 24);
+    color: white;
+}
+.registrarBoton:hover{
+    background-color: rgba(24, 24, 24, 0.884);
+    cursor: pointer;
+}
+
+input{
+    padding: 8px 40px;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 1px solid;
+    margin: 10px 70px;
+}
+label{
+    padding: 12px 12px;
+    border-radius: 10px;
+    border: none;
+    margin: 10px 70px;
+}
+.vozBoton{
+    border-radius: 5px;
+    border: 1px solid;
+    margin: 8px 70px;
+    padding: 8px 115px;
+    background-color: rgba(255, 0, 0, 0.863);
+    color: white;
+}
+.vozBoton:hover{
+    border-color: rgba(255, 0, 0, 0.938);
+    cursor: pointer;
+}
+a{
+    margin: 8px 70px;
+    padding: 8px 90px;
+}

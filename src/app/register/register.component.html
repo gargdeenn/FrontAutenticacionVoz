@@ -1,0 +1,69 @@
+<div class="contentall">
+    <button class="boton-flecha tooltip-btn" (click)="openModal()"> {{this.usuario.grabacionesListUrl.length}}</button>
+    <div class="contentRecorder">
+        <label for="">Grabar voz</label>
+        <button class="microfono" (click)="initiateRecording()" *ngIf="!recording">
+            <img src="../../assets/img/microfono (3).png" alt="">
+        </button>
+        <button class="microfonoPausa" (click)="stopRecording()" *ngIf="recording">
+            <img src="../../assets/img/pausa3.png" alt="">
+        </button>
+        <audio class="audio" #audioPlayer [src]="url" controls></audio>
+    </div>
+    <div class="contentUser">
+        <h1>Registrarse</h1>
+       <div class="user">
+        <div>
+            <label for="">CC/TI</label><br>
+            <input type="text" [(ngModel)]="usuario.CC" name="" id="">
+        </div>
+        <div>
+            <label for="">Nombre</label><br>
+            <input type="text" [(ngModel)]="usuario.nombre" name="" id="">
+        </div>
+        <div>
+            <label for="">E-mail</label><br>
+            <input type="text" [(ngModel)]="usuario.email" name="" id="">
+        </div>
+        <div>
+            <label for="">Usuario</label><br>
+            <input type="text" [(ngModel)]="usuario.usuario" name="" id="">
+        </div>
+        <div>
+            <label for="">Contraseña</label><br>
+            <input type="password" [(ngModel)]="usuario.password" name="" id="">
+        </div>
+        <div>
+            <label for="">Género</label><br>
+            <select [(ngModel)]="usuario.genero" name="" id="">
+                <option value="">Seleccione</option>
+                <option value="Femenino">Femenino</option>
+                <option value="Masculino">Masculino</option>
+            </select>
+        </div>
+        <button class="registrarBoton" (click)="add()">Registrarse</button>
+       </div>
+      
+    </div>
+</div>
+<app-modal [isOpen]="showModal">
+    <h2 class="lista">Lista de audios</h2>
+    <div class="tabla">
+        <table class="tabla-desplegable">
+            <thead>
+              <tr>
+                <th>Audios recolectados</th>
+                <th>Eliminar</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="" *ngFor="let item of this.usuario.grabacionesListUrl; index as i ">
+                <td><audio class="audio" #audioPlayer [src]="item" controls></audio></td>
+                <td class="tdbutton"><button class="basura" (click)="eliminarItem(i)"><img src="../../assets/img/basura.png" alt=""></button></td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+    <button class="botonLista" (click)="closeModal()">Cerrar</button>
+  </app-modal>
+  
