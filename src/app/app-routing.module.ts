@@ -3,10 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { MainComponent } from './main/main.component';
+import { VerificarVozComponent } from './verificar-voz/verificar-voz.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
+  {path: 'verificar', component: VerificarVozComponent},
   {path: 'main', component: MainComponent}
 ];
 

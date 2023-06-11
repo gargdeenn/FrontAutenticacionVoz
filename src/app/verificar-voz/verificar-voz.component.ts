@@ -4,13 +4,14 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { Usuario } from '../models/Usuario';
 import { UsuarioService } from '../services/usuario.service';
 import { AlertModalComponent } from '../@base/alert-modal/alert-modal.component';
+// import { setTimeout } from 'timers';
 
 @Component({
-  selector: 'app-register',
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  selector: 'app-verificar-voz',
+  templateUrl: './verificar-voz.component.html',
+  styleUrls: ['./verificar-voz.component.css']
 })
-export class RegisterComponent implements OnInit {
+export class VerificarVozComponent {
    //Lets initiate Record OBJ
    private record:any;
    //Will use this flag for detect recording
@@ -61,6 +62,12 @@ export class RegisterComponent implements OnInit {
        navigator.mediaDevices
            .getUserMedia(mediaConstraints)
            .then(this.successCallback.bind(this), this.errorCallback.bind(this));
+          //  setTimeout(() => {
+          //   // Aquí dentro se ejecutará después de 2 segundos
+          //     this.stopRecording();
+          //     this.recording=false;
+          //   // Realiza la acción que deseas después de la pausa
+          // }, 2000);
    }
    /**
     * Will be called automatically.
